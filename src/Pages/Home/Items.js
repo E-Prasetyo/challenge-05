@@ -10,7 +10,9 @@ import './Home.css';
 
 const Item = (props) => {
   let navigate = useNavigate();
-  const { data, show, driver, setDataChoice} = props;
+  const { 
+    data, show, driver, dataFlag, setDataChoice
+  } = props;
   const search = show;
 
   useEffect(() => {
@@ -36,7 +38,8 @@ const Item = (props) => {
         toRupiah={toRupiah} 
         passenger={passenger}
         checkDriver={checkDriver}
-        handleChose={handleChose}  
+        handleChose={handleChose}
+        flag={dataFlag}  
       />
     )
   })
@@ -57,6 +60,7 @@ const mapStateToProps =(state)=>{
       data : state.dataCar.cars,
       show : state.dataCar.show,
       driver : state.dataCar.driver,
+      dataFlag: state.dataCar.dataChoice
   }
 }
 

@@ -12,7 +12,7 @@ import './Details.css';
 import ButtonCostume from '../../Components/Button';
 
 const Item = (props ) => {;
-  const { data, getCar, id } = props;
+  const { data, getCar, id, dataChoice } = props;
   const { seat, year, checkDriver } = props?.dataChoice;
 
   useEffect(() => {
@@ -97,7 +97,14 @@ const Item = (props ) => {;
                   <div className="mt-5 d-flex flex-row justify-content-between">
                     <span>Total</span><b>{toRupiah(data?.price)}</b>
                   </div>
-                  <ButtonCostume className="mt-3 w-100" variant="success" >Lanjutkan Pembayaran</ButtonCostume>
+                  {/* <ButtonCostume className="mt-3 w-100" variant="success" >
+                    Lanjutkan Pembayaran
+                  </ButtonCostume> */}
+                  <ButtonCostume 
+                    className="mt-3 w-100" 
+                    variant="success" 
+                    dataFlag={dataChoice}
+                  />
                 </Card.Body>
               </Card>
             </Container>

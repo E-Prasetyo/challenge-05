@@ -5,12 +5,13 @@ import iconDate from '../../Assets/Img/fi_calendar.png';
 import { Col, Card } from 'react-bootstrap';
 import ButtonCostume from '../../Components/Button';
 
-const CardItem = ({data, toRupiah, passenger, checkDriver, handleChose }) => {
+const CardItem = ({data, toRupiah, passenger, checkDriver, handleChose, dataFlag }) => {
   const { 
     // id,
      name, category, image, price, status
   } = data;
 
+  console.log(dataFlag)
   return (
     <Col xs="4">
         <Card className="container-card">
@@ -44,13 +45,19 @@ const CardItem = ({data, toRupiah, passenger, checkDriver, handleChose }) => {
                   </small>
                 </div>
               </div>
-              <ButtonCostume 
+              {/* <ButtonCostume 
                 className="w-100 mt-3" 
                 variant="success"
                 onClick={handleChose.bind(null, data)}
               >
                 Pilih Mobil
-              </ButtonCostume>
+              </ButtonCostume> */}
+              <ButtonCostume 
+                className="w-100 mt-3" 
+                variant="success"
+                onClick={handleChose.bind(null, data)}
+                dataFlag={dataFlag}
+              />
           </Card.Body>
         </Card>
       </Col>
