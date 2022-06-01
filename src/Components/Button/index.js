@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 const ButtonCostume = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     // <Button {...props}>{props.children}</Button>
     <Button {...props}>
