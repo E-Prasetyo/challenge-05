@@ -11,7 +11,7 @@ const CardItem = ({data, toRupiah, passenger, checkDriver, handleChose, dataFlag
      name, category, image, price, status
   } = data;
 
-  console.log(dataFlag)
+  // console.log(dataFlag)
   return (
     <Col xs="4">
         <Card className="container-card">
